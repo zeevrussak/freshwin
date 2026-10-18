@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- FreshWin (c) Ze'ev Russak — Apache License 2.0 (see LICENSE + NOTICE). -->
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <RootNamespace>FreshWin</RootNamespace>
+    <Description>Disposable, just-installed Windows test VMs on QEMU/Windows: build a frozen base from any Windows 11 ISO, thaw a pristine copy per test run, exercise any app's installer and UI, discard.</Description>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Frozen into the base image / executed in the guest at logon. -->
+    <EmbeddedResource Include="Resources\guest\*.ps1" />
+  </ItemGroup>
+
+</Project>

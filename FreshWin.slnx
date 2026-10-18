@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="src/FreshWin/FreshWin.csproj" />
+  <Project Path="tests/FreshWin.Tests/FreshWin.Tests.csproj" />
+</Solution>

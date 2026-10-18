@@ -1,0 +1,35 @@
+NOTICE — FreshWin
+=================
+
+FreshWin — disposable, just-installed Windows test VMs on QEMU/Windows
+Copyright (c) 2026 Ze'ev Russak <zutm@20032014.xyz>
+https://github.com/zeevrussak/freshwin
+
+Licensed under the Apache License, Version 2.0 (see LICENSE). The attribution
+notices in this file must be preserved in source and binary redistributions
+of FreshWin and derivative works (Apache-2.0, Section 4).
+
+This project is derived from ZuTM (https://github.com/zeevrussak/ZuTM),
+Copyright (c) 2026 Ze'ev Russak — Apache License 2.0. The QEMU driving
+model, guest profiles, media pipeline and boot-chain design originate
+there.
+
+This project downloads, invokes, or stages the following third-party
+components at runtime; it does not redistribute them:
+
+1. QEMU — a fast processor emulator (GPLv2) — fetched by
+   scripts/fetch-qemu.ps1 from qemu.weilnetz.de
+2. wimboot — iPXE Windows Imaging Format bootloader (GPLv2+) — fetched as
+   the media bootloader; see https://ipxe.org/wimboot
+3. wimlib — WIM compression library and tools (GPLv3 tools / LGPLv3
+   library) — wimsplit is used to split install.wim under FAT32's 4 GiB
+   per-file ceiling; see https://wimlib.net
+4. EDK2 / OVMF / AAVMF UEFI firmware (BSD-2-Clause-Patent and others) —
+   staged from Fedora's edk2-ovmf / edk2-aarch64 RPMs; the QEMU-bundled
+   firmware is too old for Windows 24H2+ installation media
+5. virtio-win drivers (GPLv2) — staged from Fedora's virtio-win feed for
+   ARM64 guests (NIC/GPU drivers Windows ARM64 lacks in-box)
+6. Windows ISOs — supplied by the user, or optionally auto-downloaded from
+   NTDEV's tiny11 archive.org item. Windows itself is NOT open source; a
+   valid Windows license remains the user's responsibility. FreshWin never
+   redistributes Windows images.

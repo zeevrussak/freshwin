@@ -1,0 +1,13 @@
+<Project>
+
+  <!-- FreshWin (c) Ze'ev Russak — Apache License 2.0 (see LICENSE + NOTICE). -->
+
+  <PropertyGroup>
+    <Authors>Ze'ev Russak</Authors>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+</Project>

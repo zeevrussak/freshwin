@@ -1,0 +1,22 @@
+# Build outputs
+[Bb]in/
+[Oo]bj/
+artifacts/
+
+# VS / Rider
+.vs/
+.idea/
+*.user
+
+# Test results
+TestResults/
+*.trx
+
+# QEMU runtime (fetched by scripts/fetch-qemu.ps1)
+runtimes/qemu/
+
+# Working images: ISOs, firmware, media, base images, per-run overlays
+work/
+
+# Logs
+*.log
